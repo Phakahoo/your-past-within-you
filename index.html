@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F3EFE6">
+<title>Your Past Is Still Within You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=Noto+Sans+Thai:wght@400;500;600&family=Noto+Serif+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<button type="button" id="sound-btn" class="sound" aria-pressed="true" aria-label="Sound on. Tap to mute.">♪ SOUND ON</button>
+
+<main id="app">
+  <section id="landing-screen" class="screen" aria-labelledby="landing-title">
+    <p class="meta up" style="--d:.3s">THAI TRADITIONAL MUSIC &amp; DANCE CLUB · UNIVERSITY EVENT</p>
+    <div class="landing-body">
+      <h1 id="landing-title" class="display huge" data-focus tabindex="-1" aria-label="Your past is still within you">
+        <span aria-hidden="true" style="--d:.6s">YOUR PAST</span>
+        <span aria-hidden="true" style="--d:1.4s">IS STILL</span>
+        <span aria-hidden="true" style="--d:2.2s">WITHIN YOU</span>
+      </h1>
+      <p class="thai-sub up" style="--d:3.2s">อดีตของคุณยังอยู่ในตัวคุณ</p>
+    </div>
+    <div class="landing-foot up" style="--d:3.8s">
+      <p class="meta">AN INTERACTIVE PERSONALITY EXPERIENCE</p>
+      <button type="button" class="btn" data-action="start">BEGIN →</button>
+    </div>
+  </section>
+
+  <section id="intro-screen" class="screen" aria-label="Introduction" hidden>
+    <div class="intro-body">
+      <p class="story" data-focus tabindex="-1">
+        <span class="up" style="--d:.3s">บางสิ่งที่เราชอบ</span>
+        <span class="up" style="--d:1.3s">บางสิ่งที่เรารู้สึกผูกพัน</span>
+        <span class="up" style="--d:2.3s">อาจบอกเล่าเรื่องราวของเรา</span>
+        <em class="up" style="--d:3.3s">ได้มากกว่าที่คิด</em>
+      </p>
+      <p class="support up" style="--d:4.4s">ตอบคำถาม 4 ข้อ<br>เพื่อค้นหาตัวตนที่ซ่อนอยู่ในตัวคุณ</p>
+      <ul class="facts up" style="--d:5.2s">
+        <li><b>04</b><span>QUESTIONS</span></li>
+        <li><b>04</b><span>IDENTITIES</span></li>
+        <li><b>01</b><span>YOU</span></li>
+      </ul>
+    </div>
+    <button type="button" class="btn up" style="--d:5.8s" data-action="journey">BEGIN THE JOURNEY →</button>
+  </section>
+
+  <section id="quiz-screen" class="screen" aria-label="Quiz" hidden>
+    <header class="quiz-head">
+      <p class="meta" id="q-count" aria-hidden="true">01 / 04</p>
+      <div class="bar" id="bar" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0" aria-valuetext="Question 1 of 4"><i id="bar-fill"></i></div>
+    </header>
+    <div id="q-box" class="q-box">
+      <p class="meta" id="q-cat"></p>
+      <h2 class="question" id="q-text" tabindex="-1"></h2>
+      <div class="answers" id="q-answers" role="group" aria-labelledby="q-text"></div>
+    </div>
+  </section>
+
+  <section id="analysis-screen" class="screen center dark" aria-live="polite" aria-label="Analysis" hidden>
+    <div class="steps" id="analysis-steps"></div>
+  </section>
+
+  <section id="result-screen" class="screen result" aria-label="Result" hidden></section>
+</main>
+
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden></div>
+<script src="script.js"></script>
+</body>
+</html>
